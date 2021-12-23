@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<style>
+h2{
+   text-align:center;
+}
+
+table, th, td {
+  border:2px solid black;
+  border-collapse: collapse;
+  text-align:center;
+}
+th, td {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+th{
+  color:red;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+</style>
+<body>
+
+<h2>A basic HTML table</h2>
+
+<div style="overflow-x: auto;">
+<table>
+  <tr>
+    <th>DAY ORDER</th>
+    <th>1 (9.15-10.15am)</th>
+    <th>2 (10.15-11.15am)</th>
+    <th>BREAK (11.15-11.30am)</th>
+    <th>3 (11.30-12.30pm)</th>
+    <th>LUNCH (12.30-1.30 pm)</th>
+    <th>4 (1.30-2.30pm)</th>
+    <th>5 (2.30-3.30pm)</th>
+    <th>BREAK (3.30-3.45pm)</th>
+    <th>6 (3.45-4.45pm)</th>
+  </tr>
+  <tr>
+    <td>DAY 1</td>
+    <td>set-3</td>
+    <td>psg</td>
+    <td rowspan="5">BREAK</td>
+    <td>set-1</td>
+    <td rowspan="5">LUNCH</td>
+    <td>OE</td>
+    <td>EE</td>
+    <td rowspan="3">BREAK</td>
+    <td>pw</td>
+  </tr>
+  <tr>
+    <td>DAY 2</td>
+    <td>set-3</td>
+    <td>psg</td>
+    <td>set-1</td>    <td>OE</td>
+    <td>EE</td>
+    <td>pw</td>
+  </tr>  <tr>
+    <td>DAY 3</td>
+    <td>set-3</td>
+    <td>psg</td>
+    <td>set-1</td>
+    <td>OE</td>
+    <td>EE</td>
+    <td>pw</td>
+  </tr>  <tr>
+    <td>DAY 4</td>
+    <td>set-3</td>
+    <td>psg</td>
+    <td>set-1</td>
+    <td>OE</td>
+    <td colspan="3">EW Lab</td>
+  </tr>  <tr>
+    <td>DAY 5</td>
+    <td>set-3</td>
+    <td>psg</td>
+    <td>set-1</td>
+    <td>OE</td>
+    <td>EE</td>
+    <td></td>
+    <td>pw</td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+
