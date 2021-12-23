@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Key Events</h2>
+
+
+<label>Control Key is Pressed or not : </label>
+<input type="text" onkeydown="isKeyPressed(event)">
+<p id="one"></p>
+
+<p id="two">This page turns blue when you hold the V key.</p>
+
+
+<label>Unicode Key will be display : </label>
+<input type="text" onkeydown="uniKeyCode(event)" onkeyup="uniKeyUp(event)"> 
+<p id="three"></p>
+
+
+<script>
+function isKeyPressed(event) {
+  var x = document.getElementById("one");
+  if (event.ctrlKey) {
+    x.innerHTML = "The Control key was pressed!";
+  } else {
+    x.innerHTML = "The Control key was NOT pressed!";
+  }
+}
+
+
+
+  window.addEventListener("keydown", event => {
+    if (event.key == "v") {
+      document.getElementById("two").style.color = "blue";
+    }
+  });
+  window.addEventListener("keyup", event => {
+    if ( event.key == "v") {
+      document.getElementById("two").style.color = "black";
+    }
+  }); 
+
+function uniKeyCode(event) {
+  var key = event.keyCode;
+  document.getElementById("three").innerHTML = "The Unicode KEY code is: " + key;
+}
+
+function uniKeyUp(event) {
+
+  document.getElementById("three").innerHTML = "The Unicode KEY code is: ";
+}
+
+</script>
+
+</body>
+</html>
