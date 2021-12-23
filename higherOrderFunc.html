@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The filter(),reduce(),map(),sort() Method</h2>
+
+
+<p id="one"></p>
+<p id="two"></p>
+<p id="three"></p>
+<p id="four"></p>
+
+<script>
+const voteAges = [32, 3, 16, 40,17,50];
+
+document.getElementById("one").innerHTML ="filter() method creates a new array filled with elements that pass a test provided by a function.<br>It does not execute the function for empty elements.<br>It does not change the original array.<br>"+voteAges.filter(checkAdult);
+
+document.getElementById("two").innerHTML ="reduce() method executes a reducer function for array element.<br>It method returns a single value: the function's accumulated result.<br>It method does not execute the function for empty array elements.<br>It does not change the original array.<br>"+voteAges.reduce(total,0);
+
+const mapArray=voteAges.map(mapFunction)
+document.getElementById("three").innerHTML ="map() creates a new array from calling a function for every array element.<br>It calls a function once for each element in an array.<br>It does not execute the function for empty elements.<br>It does not change the original array.<br>"+mapArray;
+
+document.getElementById("four").innerHTML ="The sort() sorts the elements of an array.<br>It overwrites the original array.<br>It sorts the elements as strings in alphabetical and ascending order.<br>"+voteAges.sort();
+
+function total(sum,initial) {
+  return sum + Math.round(initial);
+}
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+function mapFunction(num){
+  return num*2;
+}
+</script>
+
+</body>
+</html>
