@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p id="one"></p>
+<p id="two"></p>
+<p id="three"></p>
+<p id="four"></p>
+<p id="five"></p>
+
+<script>
+let text = "Aspire system"; 
+
+
+let search = text.search(/aspire/i);
+let replace=text.replace(/system/i,"Systems");
+let test=/aspire/i.test(text);
+let exec=/system/i.exec(text);
+let match=text.match(/aspire/i);
+
+document.getElementById("one").innerHTML = "search()-Display the position of the match: <br>"+search;
+document.getElementById("two").innerHTML ="replace()-replaces a specified value with another value in a string :<br>"+replace;
+document.getElementById("three").innerHTML ="test()-Which return true or false: "+test;
+document.getElementById("four").innerHTML="exec()-If it finds a match, it returns a result elements, otherwise it returns null:<br> "+exec;
+document.getElementById("five").innerHTML="match()-If it finds a match, it returns a result elements, otherwise it returns null:<br> "+match;
+</script>
+
+</body>
+</html>
+
