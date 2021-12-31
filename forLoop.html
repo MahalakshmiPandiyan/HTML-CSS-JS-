@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For Loop</h2>
+
+<p id="for"></p>
+<p id="forIn"></p>
+<p id="forOf"></p>
+
+<script>
+const language = ["C", "C++", "Java", "Python", "Html", "CSS"];
+
+let output = "";
+let output1 = "";
+let output2 = "";
+for (let i = 0; i < language.length; i++) 
+{
+  output += language[i] + "<br>";
+}
+for(let i in language)
+{
+   output1+=language[i]+"<br>";
+}
+for(let i of language)
+{
+   output2+=i+"<br>";
+}
+document.getElementById("for").innerHTML = "For loop<br>"+output;
+document.getElementById("forIn").innerHTML ="For In <br>"+ output1;
+document.getElementById("forOf").innerHTML = "For Of<br>"+output2;
+</script>
+
+</body>
+</html>
