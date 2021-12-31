@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array</h2>
+
+
+<p id="display"></p>
+<p id="pop"></p>
+<p id="push"></p>
+<p id="shift"></p>
+<p id="unshift"></p>
+<p id="splice"></p>
+<p id="slice"></p>
+
+<script>
+const language = ["C", "C++", "Python", "Java"];
+document.getElementById("display").innerHTML = language;
+language.pop();
+document.getElementById("pop").innerHTML ="The pop() method removes the last element from an array <br>" +language;
+language.push("JavaScript");
+document.getElementById("push").innerHTML ="The push() will add the new element at the last index method returns the new array length <br>"+language;
+language.shift();
+document.getElementById("shift").innerHTML = "The shift() method removes the first element of an array<br>"+language;
+language.unshift("HTML");
+document.getElementById("unshift").innerHTML = "The unshift() method adds new elements to the beginning of an array<br>"+language;
+language.splice(3,0,"CSS");
+document.getElementById("splice").innerHTML ="The first parameter (2) defines the position where new elements should be added<br>The second parameter (0) defines how many elements should be removed<br>The rest of the parameters (CSS) define the new elements to be added at the index 3<br>"+language; 
+const slice=language.slice(2,4);
+document.getElementById("slice").innerHTML="When the slice() method is given two arguments, it selects array elements from the start argument, and up to (but not included) the end argument<br>"+slice;
+</script>
+
+</body>
+</html>
