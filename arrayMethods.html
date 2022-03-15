@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Methods</h2> 
+
+<p id="toString"></p>
+<p id="join"></p>
+<p id="concat"></p>
+<p id="beforeSort"></p>
+<p id="sort"></p>
+<p id="reverse"></p>
+
+<script>
+const language = ["C", "Java","C++", "Python"];
+const number=[1,2,3,4,5];
+document.getElementById("toString").innerHTML = "toString() converts an array to a string of (comma separated) array values:<br> "+language.toString();
+
+document.getElementById("join").innerHTML = "The join() method also joins all array elements into a string with specified separator:<br>"+language.join(" / ");
+
+const concatArray=language.concat(number);
+document.getElementById("concat").innerHTML ="The concat() method creates a new array by merging with existing arrays:<br>"+ concatArray;
+
+document.getElementById("beforeSort").innerHTML = "Before sorting:<br>"+language;
+language.sort();
+document.getElementById("sort").innerHTML =  "After sorting:<br>"+language;
+language.reverse();
+document.getElementById("reverse").innerHTML =  "Sort an array in descending order:<br>"+language;
+
+</script>
+
+</body>
+</html>
