@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Location of the key.</h2>
+
+<input type="text" onkeydown="myFunction(event)">
+<p>
+    0 represents a Letters<br>
+    1 represents a left key <br>
+    2 represents a right key<br>
+    3 represents a key on the numeric keypad <br>
+</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(event) {
+  var x = event.location;
+  document.getElementById("demo").innerHTML = "Key location: " + x;
+}
+</script>
+
+</body>
+</html>

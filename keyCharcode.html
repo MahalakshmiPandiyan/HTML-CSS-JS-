@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p> Unicode character code of the pressed key.</p>
+
+<input type="text" onkeypress="myFunction(event)">
+
+<p id="charCode"></p>
+
+<script>
+function myFunction(event) {
+  var x = event.charCode || event.keyCode;
+  document.getElementById("charCode").innerHTML = "The ASCII value is: " + x;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+    <h2>Key Event</h2>
+<input type="text" onkeyup="myFunction(event)">
+
+<p id="key"></p>
+
+<script>
+
+function myFunction(event) {
+
+  var x = event.key;
+
+  document.getElementById("key").innerHTML = x +" -> key was pressed";
+
+}
+</script>
+</body>
+</html>
