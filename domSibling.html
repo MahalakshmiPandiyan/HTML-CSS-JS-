@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>DOM Sibling</h1>
+<h3 id="id01">
+<p id="p1">p1-previous to p2</p>
+<p id="p2">p2</p>
+<p>p3-next to p2 </p>
+</h3>
+
+
+<p id="id02">p4</p>
+
+<script>
+var child=document.getElementById("p2")
+var sibling=child.previousElementSibling;
+sibling.style.color="red";
+
+var child=document.getElementById("p2")
+var sibling=child.nextElementSibling;
+sibling.style.color="green";
+
+</script>
+
+</body>
+</html>

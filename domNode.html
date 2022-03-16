@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>DOM NODE-Add a new HTML Element.</h1>
+
+<div id="id1">
+
+<h3 id="p1">This is h3</h3>
+
+<h3 id="p2">This is h3</h3>
+
+</div>
+
+
+<script>
+
+const tag = document.createElement("p");
+
+const node = document.createTextNode("Newly added");
+
+tag.appendChild(node);
+
+const element = document.getElementById("id1");
+
+element.appendChild(tag);
+
+</script>
+
+</body>
+
+</html>
+
+​
+
