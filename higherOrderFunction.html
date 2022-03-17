@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>HIGHER ORDER FUNCTION</h1>
+<p id="id1"></p>
+<p id="id2"></p>
+<p id="id3"></p>
+
+<script>
+const sum = (num) => { return num + 2 };
+ 
+ const newFunction = sum;
+ document.getElementById("id1").innerHTML="Access the function's name property : "+newFunction.name;
+
+ document.getElementById("id2").innerHTML="Return the function's body as a string : "+newFunction.toString();
+
+ const numbers = [1,55,21,44,74];
+ let total="";
+ numbers.forEach(number => {  
+   total +=number+"<br>";
+ }); 
+ document.getElementById("id3").innerHTML="for each : "+total;
+</script>
+
+</body>
+
+</html>
+
