@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Callbacks</h2>
+
+
+<p id="id1"></p>
+
+<script>
+function print(text) {
+  document.getElementById("id1").innerHTML = text;
+}
+
+function calculate(num1, num2, myCallback) {
+  let sum = num1*num2;
+  myCallback(sum);
+}
+
+calculate(15, 15, print);
+</script>
+
+</body>
+</html>
