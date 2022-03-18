@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Properties</h2>
+
+<p id="id1"></p>
+<p id="id2"></p>
+<p id="id3"></p>
+<p id="id4"></p>
+<p id="id5"></p>
+<p id="id6"></p>
+<p id="id7"></p>
+
+<script>
+let text = "India is my Country";
+
+let text1="I like manago"
+
+document.getElementById("id1").innerHTML = "length-returns the length of a string:<br>"+text.length;
+
+document.getElementById("id2").innerHTML = "slice()-extract a part of a string and returns the extracted parts in a string: <br>"+text.slice(0,5); 
+
+document.getElementById("id3").innerHTML ="substring() is similar to slice(). second parameter specifies the length of the extracted part<br>"+ text.substring(6,2);
+
+document.getElementById("id4").innerHTML ="toUpperCase()- converted to upper case:<br>"+text.toUpperCase();
+
+document.getElementById("id5").innerHTML="replace() - replaces a specified value with another value in a string:<br>"+text1.replace("manago","chocolate");
+
+document.getElementById("id6").innerHTML="charAt()-returns the character at a given position in a string:<br>"+text.charAt(1);
+
+document.getElementById("id7").innerHTML="charCodeAt()-returns the ASCII value at a given position in a string:<br>"+text.charCodeAt(1);
+
+</script>
+
+</body>
+</html>
+
