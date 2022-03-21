@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        class ClassButton extends HTMLButtonElement{
+            constructor(){
+                super();
+                this.addEventListener('click',() => alert("mahaaa"));
+            }
+        }
+        customElements.define('new-button',ClassButton,{extends:'button'});
+    </script> 
+    <button is="new-button">click here</button>
+    <button is="new-button" disabled>Disable</button>
+</body>
+</html>
