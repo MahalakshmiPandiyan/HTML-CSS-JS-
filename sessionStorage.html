@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick="getName()" type="button">Get Name</button>
+        <p id="id1"></p>
+        <script>
+            function getName(){
+                sessionStorage.setItem("name","MAHA PANDIYAN");
+                document.getElementById("id1").innerHTML=sessionStorage.getItem("name");
+            }
+        </script>
+    </body>
+</html>
