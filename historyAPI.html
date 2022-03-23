@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <head>
+            <style>
+                button{
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    background-color: black;
+                    color: white;
+                }
+            </style>
+</head>
+<h1> History API</h1>
+<p id="id1"></p>
+<button onclick="history.forward()">Go Forward</button><br>
+<button onclick="history.back()">Go Back</button><br>
+<button onclick="history.go(1)">Go 1page Forward</button>
+
+
+<h3><a href="https://www.google.com" target="_blank">Google</a></h3>
+<h3><a href="https://www.yahoo.com" target="_self">Yahoo</a></h3>
+<h3><a href="https://www.w3school.com" target="_parent">w3 schools</a></h3>
+<h3><a href="https://www.yahoo.com" target="_top">Yahoo</a></h3>
+
+<script>
+    let length = window.history.length;
+    document.getElementById("id1").innerHTML = "Number of URLs in the history list of the current browser window. <br>"+length;
+</script>
+
+</body>
+</html>
