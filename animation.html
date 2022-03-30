@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#id1 
+{
+  border:4px solid black;
+  width: 500px;
+  height: 100px;
+  border-radius: 15px; 
+  margin-bottom: 20px;
+}
+.para
+{
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: 3;
+}
+@keyframes example{
+  0%{left:0px; top:0px;}
+  45%{left:400px; top:0px;}
+  100%{left:0px; top:0px;}
+}
+#id2 {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  animation-name: example2;
+  animation-duration: 4s;
+}
+
+@keyframes example2 {
+  from {background-color: blueviolet;}
+  to {background-color: yellow;}
+}
+</style>
+</head>
+<body>
+<div id="id1"><p class="para">Aspire Systems</p></div>
+<div id="id2"></div>
+
+</body>
+</html>
