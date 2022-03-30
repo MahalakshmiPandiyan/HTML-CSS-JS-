@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        p{
+            font-size: 20px;
+            text-align: center;
+            color: blue;        }
+    </style>
+    <body>
+        <p id="id1"></p>
+        <script>
+            const div1=document.getElementById('id1');
+            window.addEventListener('deviceorientation',function(){
+                var angle=window.orientation;
+                switch(angle){
+                    case 0:div1.innerHTML="portrait 0";
+                    break;
+                    case 90:div1.innerHTML="landscape +90";
+                    break;
+                    case -90:div1.innerHTML="landscape -90";
+                    break;
+                }
+            })
+        </script>
+    </body>
+</html>
