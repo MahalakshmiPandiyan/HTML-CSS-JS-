@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      font-family: Calibr;
+      background-color: blue;
+
+    }
+
+    .box {
+      width: 850px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+    }
+
+    .box .header {
+      background-color: black;
+    }
+
+    .box .header h3 {
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+    }
+
+    .form-control {
+      padding-bottom: 20px;
+      position: relative;
+    }
+
+    .form-control input {
+      width: 55%;
+      margin-bottom: 15px;
+      padding: 20px;
+      border-radius: 7px;
+      background-color: gainsboro;
+      font-size: 18px;
+    }
+
+    .form-control select {
+      width: 60%;
+      padding: 20px;
+      border-radius: 7px;
+      background-color: gainsboro;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .form-control label {
+      display: inline-block;
+      width: 150px;
+      padding: 20px;
+      font-size: 20px;
+    }
+
+    .form-control small {
+      color: red;
+      margin-left: 20px;
+      font-size: 20px;
+
+    }
+
+    #adc,
+    #pc {
+      display: none;
+    }
+
+    button {
+      background-color: darkblue;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .form-control input[type=radio] {
+      width: 16px;
+    }
+
+    .error {
+      border: 3px solid red;
+    }
+
+    .success {
+      border: 3px solid green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="header"u
+      <center><h3>Registration Form</h3></center>
+    </div>
+    <form id="form" method="post" action="thanks.html" onsubmit="return validateForm()">
+      <div class="form-control">
+        <label for="firstname" name="firstname"> <b>First Name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Firstname"><br>
+        <small id="id1"></small>
+      </div>
+
+      <div class="form-control">
+        <label for="lastname" name="lastname"> Last Name</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Lastname"><br>
+        <small id="id2"></small>
+      </div>
+
+      <div class="form-control">
+        <label for="company" name="company"> Company </label>
+        <input type="text" id="company" name="company" placeholder="Enter name of the company" value="Aspire System"
+          disabled><br>
+        <small></small>
+      </div>
+
+
+      <div class="form-control">
+        <label for="email" name="class">Email Id</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email id"><br>
+        <small id="id3"></small>
+      </div>
+
+      <div class="form-control">
+        <label for="phone" name="phone"> Phone No</label>
+        <input type="tel" placeholder="Enter phone number" name="phoneNumber" id="phoneNumber"><br>
+        <small id="id4"></small>
+      </div>
+
+
+      <div class="form-control">
+        <label for="domain" name="domain"> Domain </label>
+        <select id="domain" name="domain" onchange="yesnoCheck(this);">
+          <option value="">__Select__</option>
+          <option value="aadhar">Aadhaar Card</option>
+          <option value="pan">Pan Card</option>
+        </select><br>
+        <small id="id5"></small>
+      </div>
+
+      <div class="form-control">
+        <div id="adc">
+          <label for="aadhar">Aadhar Card No</label>
+          <input type="text" id="aadhar" placeholder="Enter Aadhaar Card" name="aadhar"><br>
+          <small id="id7"></small>
+
+        </div>
+      </div>
+
+      <div class="form-control">
+        <div id="pc">
+          <label for="pan">Pan Card No</label>
+          <input type="text" id="pan" placeholder="Enter Pan Card" name="pan"><br>
+          <small id="id8"></small>
+
+        </div>
+      </div>
+
+      <div class="form-control">
+        <label for="date" name="date"> Date</label>
+        <input type="date" id="date" name="date"><br>
+        <small id="id6"></small>
+      </div>
+
+      <div class="form-control">
+        <center><button type="submit" id="submit">Submit</button></center>
+      </div>
+
+    </form>
+  </div>
+
+  <script src="formjs.js"></script>
+</body>
+
+</html>
