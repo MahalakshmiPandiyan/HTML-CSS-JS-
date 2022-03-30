@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  Name: <input type="text" id="fname" onfocusin="focusIn()">
+  College: <input type="text" id="college" onfocusout="focusOut()">
+
+  <script>
+    function focusIn() {
+      var x1 = document.getElementById("fname");
+      x1.style.background = "yellow";
+
+    }
+
+    function focusOut() {
+      var x = document.getElementById("college");
+      x.value = x.value.toUpperCase();
+    }
+  </script>
+</body>
+
+</html>
