@@ -1,175 +1,215 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="formcss.css">
+    </head>
+    <body>
+        <!-- <section> -->
+            <div class="container">
+                <form  class="form" action="thanks.html" onsubmit="return validateForm()">
+                    <div class="step step-1 active">
+                      <h1>Basic</h1>
+                        <div class="form-control">
+                            <label for="firstname" name="firstname"> <b>First Name</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="Firstname"><br>
+                                <small id="id1"></small>
+                          </div>
+                    
+                          <div class="form-control">
+                            <label for="lastname" name="lastname"> Last Name</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Lastname"><br>
+                            <small id="id2"></small>
+                          </div>
+                    
+                          <div class="form-control">
+                            <label for="password" name="password"> Password </label>
+                            <input type="password" id="password" name="password" placeholder="Enter name of the password" ><br>
+                            <small id="id5"></small>
+                          </div>
+                    
+                          <div class="form-control">
+                            <label for="confirmPassword" name="confirmPassword"> Confirm Password </label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter name of the confirm Password" ><br>
+                            <small id="id4"></small>
+                          </div>
 
-<head>
-  <style>
-    body {
-      font-family: Calibr;
-      background-color: blue;
+                    
+                          <div class="form-control">
+                            <label for="email" name="class">Email Id</label>
+                            <input type="email" id="email" name="email" placeholder="Enteryour email id"><br>
+                            <small id="id3"></small>
+                          </div>
+                          <div>
+                            <button type="button" class="next-btn" id="next1">Next</button>
+                          </div>
+                    </div>
+                    <div class="step step-2">
+                      <h1>Others</h1>
+                        <div class="form-control">
+                            <label for="date" name="date"> Date</label>
+                            <input type="date" id="date" name="date"><br>
+                            <small id="id6"></small>
+                          </div>
 
-    }
+                          
+                          <div class="form-control">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <td><label for="gender"> Gender</label> </td>
+                    
+                                  <td><input type="radio" name="gender" id="male" value="male" ></td>
+                                  <td><label>Male</label></td>
+                    
+                                  <td><input type="radio" name="gender" id="female" value="female"></td>
+                                  <td><label>Female</label></td>
+                                  <br>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <small id="id7"></small>
+                          </div>
 
-    .box {
-      width: 850px;
-      margin: auto;
-      background-color: white;
-      padding: 20px;
-    }
+                          <div class="form-control">
+                            <label for="address" name="address">Address</label>
+                            <input type="text" id="address" name="address" placeholder="address"><br>
+                                <small id="id8"></small>
+                          </div>
 
-    .box .header {
-      background-color: black;
-    }
+                          <div class="form-control">
+                            <label for="state" name="state">State</label>
+                            <select id="state" name="state">
+                              <option value="">Choose your state</option>
+                              <option value="Andhra Pradesh">Andhra Pradesh</option>
+                              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                              <option value="Assam">Assam</option>
+                              <option value="Bihar">Bihar</option>
+                              <option value="Chhattisgarh">Chhattisgarh</option>
+                              <option value="Delhi">Delhi</option>
+                              <option value="Goa">Goa</option>
+                              <option value="Gujarat">Gujarat</option>
+                              <option value="Haryana">Haryana</option>
+                              <option value="Himachal Pradesh">Himachal Pradesh</option>
+                              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                              <option value="Jharkhand">Jharkhand</option>
+                              <option value="Karnataka">Karnataka</option>
+                              <option value="Kerala">Kerala</option>
+                              <option value="Madhya Pradesh">Madhya Pradesh</option>
+                              <option value="Maharashtra">Maharashtra</option>
+                              <option value="Manipur">Manipur</option>
+                              <option value="Meghalaya">Meghalaya</option>
+                              <option value="Mizoram">Mizoram</option>
+                              <option value="Nagaland">Nagaland</option>
+                              <option value="Odisha">Odisha</option>
+                              <option value="Punjab">Punjab</option>
+                              <option value="Rajasthan">Rajasthan</option>
+                              <option value="Sikkim">Sikkim</option>
+                              <option value="Tamil Nadu">Tamil Nadu</option>
+                              <option value="Telangana">Telangana</option>
+                              <option value="Tripura">Tripura</option>
+                              <option value="Uttar Pradesh">Uttar Pradesh</option>
+                              <option value="Uttarakhand">Uttarakhand</option>
+                              <option value="West Bengal">West Bengal</option>
+                          </select><br>
+                          <small id="id9"></small>
+                          </div>
 
-    .box .header h3 {
-      color: white;
-      padding: 20px;
-      font-size: 20px;
-    }
+                          <div class="form-control">
+                            <label for="phone" name="phone"> Phone No</label>
+                            <input type="tel" placeholder="Enter phone number" name="phoneNumber" id="phoneNumber"><br>
+                            <small id="id10"></small>
+                          </div>
+                    
+                    
+                            <button type="button" class="previous-btn">Previous</button>
+                            <button type="button" class="next-btn">Next</button>
+      
+                    </div>
+                    <div class="step step-3">
+                      <h1>Work</h1>
+                      <div class="form-control">
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td><label for="occupation">Occupation</label> </td>
+                
+                              <td><input type="radio" name="occupation" id="developer" value="developer" ></td>
+                              <td><label>Developer</label></td>
+                
+                              <td><input type="radio" name="occupation" id="testing" value="testing"></td>
+                              <td><label>Testing</label></td>
 
-    .form-control {
-      padding-bottom: 20px;
-      position: relative;
-    }
+                              <td><input type="radio" name="occupation" id="sales" value="sales"></td>
+                              <td><label>Sales</label></td>
 
-    .form-control input {
-      width: 55%;
-      margin-bottom: 15px;
-      padding: 20px;
-      border-radius: 7px;
-      background-color: gainsboro;
-      font-size: 18px;
-    }
+                              <td><input type="radio" name="occupation" id="banking" value="banking"></td>
+                              <td><label>Banking</label></td>
+                              <br>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
 
-    .form-control select {
-      width: 60%;
-      padding: 20px;
-      border-radius: 7px;
-      background-color: gainsboro;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
+                      <div class="form-control">
+                        <label for="experience" name="experience">Experience</label>
+                        <input type="text" placeholder="Enter Overall Years of experience" name="experience" id="experience"><br>
+                      </div>
 
-    .form-control label {
-      display: inline-block;
-      width: 150px;
-      padding: 20px;
-      font-size: 20px;
-    }
+                      <button type="button" class="previous-btn">Previous</button>
+                      <button type="button" class="next-btn">Next</button>
+                    </div>
 
-    .form-control small {
-      color: red;
-      margin-left: 20px;
-      font-size: 20px;
+                    <div class="step step-4">
+                      <h1>Education</h1>
+                      <div class="form-control">
+                        <label for="graduation" name="graduation">Graduation</label>
+                        <select id="graduation" name="graduation" multiple> 
+                          <option>Select a option</option>  
+                          <option value="SSLC">SSLC</option>
+                          <option value="HSC">HSC</option>
+                          <option value="UG">UG</option>
+                          <option value="PG">PG</option>
+                        </select>
+                      </div>
+                      <div class="form-control">
+                        <label for="year" name="year">Year of Passing</label>
+                        <input type="text" placeholder="Enter Year of Passing" name="year" id="year"><br>
+                      </div>
 
-    }
+                      <button type="button" class="previous-btn">Previous</button>
+                      <button type="button" class="next-btn">Next</button>
+                  
+                    </div>
 
-    #adc,
-    #pc {
-      display: none;
-    }
+                    <div class="step step-5">
+                      <h1>Team</h1>
+                          <div class="form-control">
+                            <select id="dep" name="dep">
+                              <option value="" >Choose your practice</option>
+                              <option value="Lamp">LAMP</option>
+                              <option value="Dotnet">DOTNET</option>
+                              <option value="BFS">BFS</option>
+                              <option value="IAS">IAS</option>
+                              <option value="Oracle">Oracle</option>
+                            </select>
+                            <small id="depSmall"></small><br><br><br>
+                          </div>
 
-    button {
-      background-color: darkblue;
-      color: white;
-      padding: 10px;
-      border-radius: 10px;
-    }
-
-    .form-control input[type=radio] {
-      width: 16px;
-    }
-
-    .error {
-      border: 3px solid red;
-    }
-
-    .success {
-      border: 3px solid green;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="box">
-    <div class="header"u
-      <center><h3>Registration Form</h3></center>
-    </div>
-    <form id="form" method="post" action="thanks.html" onsubmit="return validateForm()">
-      <div class="form-control">
-        <label for="firstname" name="firstname"> <b>First Name</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Firstname"><br>
-        <small id="id1"></small>
-      </div>
-
-      <div class="form-control">
-        <label for="lastname" name="lastname"> Last Name</label>
-        <input type="text" id="lastname" name="lastname" placeholder="Lastname"><br>
-        <small id="id2"></small>
-      </div>
-
-      <div class="form-control">
-        <label for="company" name="company"> Company </label>
-        <input type="text" id="company" name="company" placeholder="Enter name of the company" value="Aspire System"
-          disabled><br>
-        <small></small>
-      </div>
-
-
-      <div class="form-control">
-        <label for="email" name="class">Email Id</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email id"><br>
-        <small id="id3"></small>
-      </div>
-
-      <div class="form-control">
-        <label for="phone" name="phone"> Phone No</label>
-        <input type="tel" placeholder="Enter phone number" name="phoneNumber" id="phoneNumber"><br>
-        <small id="id4"></small>
-      </div>
-
-
-      <div class="form-control">
-        <label for="domain" name="domain"> Domain </label>
-        <select id="domain" name="domain" onchange="yesnoCheck(this);">
-          <option value="">__Select__</option>
-          <option value="aadhar">Aadhaar Card</option>
-          <option value="pan">Pan Card</option>
-        </select><br>
-        <small id="id5"></small>
-      </div>
-
-      <div class="form-control">
-        <div id="adc">
-          <label for="aadhar">Aadhar Card No</label>
-          <input type="text" id="aadhar" placeholder="Enter Aadhaar Card" name="aadhar"><br>
-          <small id="id7"></small>
-
-        </div>
-      </div>
-
-      <div class="form-control">
-        <div id="pc">
-          <label for="pan">Pan Card No</label>
-          <input type="text" id="pan" placeholder="Enter Pan Card" name="pan"><br>
-          <small id="id8"></small>
-
-        </div>
-      </div>
-
-      <div class="form-control">
-        <label for="date" name="date"> Date</label>
-        <input type="date" id="date" name="date"><br>
-        <small id="id6"></small>
-      </div>
-
-      <div class="form-control">
-        <center><button type="submit" id="submit">Submit</button></center>
-      </div>
-
-    </form>
-  </div>
-
-  <script src="formjs.js"></script>
-</body>
-
+                          <div class="center">
+                            <input type="checkbox" id="check" value="check" >
+                            <label for="check">Agree with the terms and conditions</label><br>
+                            <small id="checkSmall"></small>
+                          </div>
+        
+                          <button type="button" class="previous-btn">Previous</button>
+                          <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        <!-- </section> -->
+        <script src="formjs.js"></script>
+    </body>
 </html>
+
+
+
