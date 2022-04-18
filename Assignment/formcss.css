@@ -1,0 +1,73 @@
+section{
+  display: flex;
+}
+body
+{
+  background-image:url("img.jpg") ;
+}
+
+.container  h1 {
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  background-color: grey;
+}
+
+.container{
+  width: 700px;
+  background-image:url("img1.jpg") ;
+  padding: 20px;
+  box-shadow: 0px 0px 20px black;
+  margin: 180px 500px;
+}
+h1{
+  text-align: center;
+}
+sup{
+  color: red;
+}
+.step{
+display: none;
+}
+.step.active{
+  display: block;
+}
+.form-control label{
+  font-size: 25px;
+}
+.form-control{
+  width: 100%;
+  margin-top: 20px;
+}
+.form-control input[type=radio] {
+  width: 16px;
+}
+.form-control input,
+.form-control select{
+  width: 95%;
+  border: 1.5px solid black;
+  padding: 5px;
+  font-size: 23px;
+  margin: 5px;
+  border-radius: 4px;
+}
+button.next-btn,
+button.previous-btn,
+button.submit-btn{
+  float: right;
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: lightcoral;
+  font-size: 19px;
+  cursor: pointer;
+}
+button.previous-btn{
+  float: left;   
+}
+button.submit-btn{
+  background-color: green;
+}
+small {
+  color: red;
+  font-size: 20px;
+}
