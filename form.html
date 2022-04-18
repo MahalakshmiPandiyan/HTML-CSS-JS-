@@ -4,10 +4,10 @@
         <link rel="stylesheet" href="formcss.css">
     </head>
     <body>
-        <!-- <section> -->
+        <section>
             <div class="container">
                 <form  class="form" action="thanks.html" onsubmit="return validateForm()">
-                    <div class="step step-1 active">
+                    <div class="step step-1 ">
                       <h1>Basic</h1>
                         <div class="form-control">
                             <label for="firstname" name="firstname"> <b>First Name</label>
@@ -43,7 +43,7 @@
                             <button type="button" class="next-btn" id="next1">Next</button>
                           </div>
                     </div>
-                    <div class="step step-2">
+                    <div class="step step-2 active">
                       <h1>Others</h1>
                         <div class="form-control">
                             <label for="date" name="date"> Date</label>
@@ -110,22 +110,21 @@
                               <option value="Uttar Pradesh">Uttar Pradesh</option>
                               <option value="Uttarakhand">Uttarakhand</option>
                               <option value="West Bengal">West Bengal</option>
-                          </select><br>
-                          <small id="id9"></small>
+                            </select><br>
+                            <small id="id9"></small>  
                           </div>
 
-                          <div class="form-control">
-                            <label for="phone" name="phone"> Phone No</label>
-                            <input type="tel" placeholder="Enter phone number" name="phoneNumber" id="phoneNumber"><br>
-                            <small id="id10"></small>
-                          </div>
-                    
+                              <div class="form-control">
+                                <label for="phone" name="phone"> Phone No</label>
+                                <input type="tel" placeholder="Enter phone number" name="phoneNumber" id="phoneNumber"><br>
+                                <small id="id10"></small>
+                              </div>     
                     
                             <button type="button" class="previous-btn">Previous</button>
                             <button type="button" class="next-btn">Next</button>
       
                     </div>
-                    <div class="step step-3">
+                    <div class="step step-3 ">
                       <h1>Work</h1>
                       <div class="form-control">
                         <table>
@@ -163,17 +162,19 @@
                       <h1>Education</h1>
                       <div class="form-control">
                         <label for="graduation" name="graduation">Graduation</label>
-                        <select id="graduation" name="graduation" multiple> 
-                          <option>Select a option</option>  
+                        <select id="graduation" name="graduation" > 
+                          <option value="" >Choose your Highest qualification</option>
                           <option value="SSLC">SSLC</option>
                           <option value="HSC">HSC</option>
                           <option value="UG">UG</option>
                           <option value="PG">PG</option>
                         </select>
+                        <small id="graduateSmall"></small><br>
                       </div>
                       <div class="form-control">
                         <label for="year" name="year">Year of Passing</label>
                         <input type="text" placeholder="Enter Year of Passing" name="year" id="year"><br>
+                        <small id="yearSmall"></small>
                       </div>
 
                       <button type="button" class="previous-btn">Previous</button>
@@ -206,10 +207,8 @@
                     </div>
                 </form>
             </div>
-        <!-- </section> -->
+        </section>
         <script src="formjs.js"></script>
     </body>
 </html>
-
-
-
+ 
