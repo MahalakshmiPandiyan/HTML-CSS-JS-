@@ -16,14 +16,14 @@ prevBtn.forEach(button =>{
 
 function changeStep(btn){
     let index=0;
-    const active=document.querySelector('form .step.active');
+    const active=document.querySelector('.active');
     index=steps.indexOf(active);
     steps[index].classList.remove('active')
     if(btn=='next')
     {
         if(index==0)
         {
-            if(firstNameValidate()==true && lastNameValidate()==true && emailIdValidate()==true)
+            if(firstNameValidate()==true && lastNameValidate()==true && passwordValidate()==true && confirmPasswordValidate()==true && emailIdValidate()==true )
             {
                 index ++;
             }
@@ -34,7 +34,7 @@ function changeStep(btn){
         }
         else if(index==1)
         {
-            if(dateValidate()===true && stateValidate()==true && phoneNumberValidate()==true )
+            if(dateValidate()===true &&  genderValidate()==true && stateValidate()==true && phoneNumberValidate()==true )
             {
                 index++;
             }
@@ -48,7 +48,15 @@ function changeStep(btn){
         }
         else if(index==3)
         {
-          index++;
+          if(graduateValidate()==true && yearOfPassValidate()==true)
+          {
+            index++;
+
+          }
+          else
+          {
+            index=3;
+          }
         }
         else if(index==4)
         {
@@ -61,8 +69,6 @@ function changeStep(btn){
         index --;
     }
     steps[index].classList.add('active')
-    console.log(index);
-    console.log(active);
 
 }
 
@@ -133,8 +139,8 @@ function firstNameValidate() {
     if (setDate.value.trim() === "") {
       onError(setDate, "Date name not selected", idDate);
     }
-    else if (dateValidation(setDate.value.trim())) {
-      onError(setDate, "Select Today's Date", idDate);
+    else if (!dateValidation(setDate.value.trim())) {
+      onError(setDate, "age should be greater than 20", idDate);
     }
     else {
       onSuccess(setDate, idDate);
@@ -180,6 +186,76 @@ function firstNameValidate() {
   }
 }
 
+function passwordValidate()
+{
+    var idPass=document.getElementById("id5");
+    if (password.value.trim() === "") {
+        onError(password, "password cannot be empty", idPass);
+      }
+      else if (!passwordValidation(password.value.trim())) {
+        onError(password, "password should have atleast one uppercase,one lowercase,one special character,one number", idPass);
+      }
+      else {
+        onSuccess(password, idPass);
+        return true;
+    
+      }
+}
+function confirmPasswordValidate()
+{
+    var idConformPass=document.getElementById("id4");
+    if (confirmPassword.value.trim() === "") {
+        onError(confirmPassword, "Confirm Password cannot be empty", idConformPass);
+      }
+      else if (password.value.trim()!==confirmPassword.value.trim()) {
+        onError(confirmPassword, "passwords does not match", idConformPass);
+      }
+      else {
+        onSuccess(confirmPassword, idConformPass);
+        return true;
+    
+      }
+}
+
+function genderValidate()
+{
+    var idGender=document.getElementById("id7");
+    if (genderMale.checked===false  && genderFemale.checked===false) {
+        onError(genderFemale, "Gender cannot be empty", idGender);
+      }
+      else {
+        onSuccess(genderFemale, idGender);
+        return true;
+    
+      }
+}
+
+function graduateValidate(){
+  var idGrad=document.getElementById("graduateSmall")
+    if (!graduateValidation(graduate.value.trim())) {
+      onError(graduate, "graduation not selected", idGrad);
+    }
+    else {
+      onSuccess(graduate, idGrad);
+      return true;
+    }
+}
+
+function yearOfPassValidate(){
+  var idYear=document.getElementById("yearSmall");
+  if (yearOfPass.value.trim() === "") {
+      onError(yearOfPass, "Year of passing cannot be empty", idYear);
+    }
+    else if (!yearOfPassValidation(yearOfPass.value.trim())) {
+      onError(yearOfPass, "Enter the valid year", idYear);
+    }
+    else {
+      onSuccess(yearOfPass, idYear);
+      return true;
+  
+    }
+}
+
 
 let firstName = document.getElementById("firstname");
 let lastName = document.getElementById("lastname");
@@ -189,6 +265,12 @@ let state = document.getElementById("state");
 let phoneNo = document.getElementById("phoneNumber");
 let department = document.getElementById("dep");
 let check=document.getElementById("check");
+let password=document.getElementById("password")
+let confirmPassword=document.getElementById("confirmPassword");
+let genderMale=document.getElementById("male");
+let genderFemale=document.getElementById("female");
+let graduate=document.getElementById("graduation");
+let yearOfPass=document.getElementById("year");
 
 
 firstName.addEventListener('blur', firstNameValidate);
@@ -199,7 +281,12 @@ state.addEventListener('blur', stateValidate);
 phoneNo.addEventListener('blur', phoneNumberValidate);
 department.addEventListener('blur', departmentValidate);
 check.addEventListener('blur', checkValidate);
-
+password.addEventListener('blur',passwordValidate);
+confirmPassword.addEventListener('blur',confirmPasswordValidate)
+genderMale.addEventListener('blur',genderValidate);
+genderFemale.addEventListener('blur',genderValidate);
+graduate.addEventListener('blur',graduateValidate);
+yearOfPass.addEventListener('blur',yearOfPassValidate);
 
 function onSuccess(input, id) {
     id.innerHTML = "";
@@ -232,11 +319,9 @@ function onSuccess(input, id) {
   }
 
   function dateValidation(setDate) {
-    const otherDate = new Date(setDate);
-    const todayDate = new Date();
-    if (otherDate.getDate() === todayDate.getDate() &&
-      otherDate.getMonth() === todayDate.getMonth() &&
-      otherDate.getYear() === todayDate.getYear()) {
+      var age=Math.floor((new Date().getFullYear() - new Date(setDate).getFullYear()));
+      console.log(age);
+    if (age<21){
       return false;
     }
     else {
@@ -274,6 +359,16 @@ function onSuccess(input, id) {
     }
   }
 
+  function graduateValidation(graduate)
+  {
+    if (graduate === "") {
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
+
 function checkValidation(check)
 {
   if(check.checked===false)
@@ -283,6 +378,29 @@ function checkValidation(check)
   else
   {
     return true;
+  }
+}
+
+function passwordValidation(password)
+{
+    var passwordRegx=/^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[a-zA-z0-9!@#$%^&*]{6,15}$/;
+    if(password.match(passwordRegx))
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+function yearOfPassValidation(yearOfPass){
+  var yearRegex=/^[1]{1}[9]{1}[5-9]{1}[0-9]{1}$/;
+  var yearRegex1=/^[2]{1}[0]{1}[0-2]{1}[0-9]{1}$/;
+  if (yearOfPass.match(yearRegex) || yearOfPass.match(yearRegex1)) {
+    return true;
+  }
+  else {
+    return false;
   }
 }
   function validateForm() 
@@ -304,5 +422,4 @@ function checkValidation(check)
     }
     return false;
   
-    
-  }
+}
